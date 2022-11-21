@@ -1,11 +1,12 @@
 import React from 'react';
-
+import { Outlet, Link } from "react-router-dom";
 
 class Images extends React.Component {
     render() {
         return (
             <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          
           <img class="navbar-brand" src="images/Palestine.png" width="50" height="50" />
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,23 +14,24 @@ class Images extends React.Component {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Palestine<span class="sr-only">(current)</span></a>
+                <Link class="nav-link" to="/home">home</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="images.html">Images</a>
+                <Link class="nav-link" to="/images">Images</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="history.html">History</a>
+                <Link class="nav-link" to="/history">History</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <Link class="nav-link" to="/about">About</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="people.html">People</a>
+                <Link class="nav-link" to="/people">People</Link>
               </li>
             </ul>
           </div>
         </nav>
+        <Outlet />
         
         <h1 class="header"> Palestine Images</h1>
         
@@ -64,6 +66,10 @@ class Images extends React.Component {
                 </div>
             </div>
         
+        <footer class="footer">
+      <p class='data'>Francis Habash</p>
+      <p class='data'><a href="https://github.com/francishabash/CS260-creative3">Github</a></p>
+    </footer>
             </div>
         );
     }

@@ -44,3 +44,20 @@
     
 }
 
+.body_div{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    color: #FFFFFF;
+    margin-top: auto;
+    padding: 3px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+ul {
+  list-style-type: circle;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Outlet, Link } from "react-router-dom";
 
 class People extends React.Component {
   constructor(props) {
@@ -45,13 +45,14 @@ class People extends React.Component {
 
   
     render(){
-      const {isLoaded, items } = this.state;
+    const {isLoaded, items } = this.state;
     if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
       return (
-        <div>
+        <div class="body_div">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          
           <img class="navbar-brand" src="images/Palestine.png" width="50" height="50" />
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -59,29 +60,31 @@ class People extends React.Component {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Palestine<span class="sr-only">(current)</span></a>
+                <Link class="nav-link" to="/home">home</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="images.html">Images</a>
+                <Link class="nav-link" to="/images">Images</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="history.html">History</a>
+                <Link class="nav-link" to="/history">History</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <Link class="nav-link" to="/about">About</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="people.html">People</a>
+                <Link class="nav-link" to="/people">People</Link>
               </li>
             </ul>
           </div>
         </nav>
+        <Outlet />
+        
         <h1 class="mine">Famous people in Palestine</h1>
         <h3 class="mine">I am getting these names from an api call to an online list</h3>
         <ul>
           {items.map(item => (
-            <li class="names">
-              {item.name}
+            <li key={item.id} class="names">
+              Name: {item.name} | Email: {item.email}
             </li>
           ))}
         </ul>
@@ -90,41 +93,14 @@ class People extends React.Component {
         <p>Time spent on page</p>
         Seconds: {this.state.seconds}
       </div>
+      <footer class="footer">
+      <p class='data'>Francis Habash</p>
+      <p class='data'><a href="https://github.com/francishabash/CS260-creative3">Github</a></p>
+    </footer>
         </div>
       );
     }
       
-        // return(
-        //     <div>
-        //     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        //   <img class="navbar-brand" src="images/Palestine.png" width="50" height="50" />
-        //   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        //     <span class="navbar-toggler-icon"></span>
-        //   </button>
-        //   <div class="collapse navbar-collapse" id="navbarNav">
-        //     <ul class="navbar-nav ml-auto">
-        //       <li class="nav-item active">
-        //         <a class="nav-link" href="index.html">Palestine<span class="sr-only">(current)</span></a>
-        //       </li>
-        //       <li class="nav-item">
-        //         <a class="nav-link" href="images.html">Images</a>
-        //       </li>
-        //       <li class="nav-item">
-        //         <a class="nav-link" href="history.html">History</a>
-        //       </li>
-        //       <li class="nav-item">
-        //         <a class="nav-link" href="about.html">About</a>
-        //       </li>
-        //       <li class="nav-item">
-        //         <a class="nav-link" href="anime.html">Anime</a>
-        //       </li>
-        //     </ul>
-        //   </div>
-        // </nav>
-        //     <h1 class="mine">Famous people in Palestine</h1>
-        //     </div>
-        
-        // );
     }
 }
 

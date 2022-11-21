@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Outlet, Link } from "react-router-dom";
 
 class Home extends React.Component {
     render() {
@@ -14,23 +14,24 @@ class Home extends React.Component {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Palestine<span class="sr-only">(current)</span></a>
+                <Link class="nav-link" to="/home">home</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="images.html">Images</a>
+                <Link class="nav-link" to="/images">Images</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="history.html">History</a>
+                <Link class="nav-link" to="/history">History</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <Link class="nav-link" to="/about">About</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="people.html">People</a>
+                <Link class="nav-link" to="/people">People</Link>
               </li>
             </ul>
           </div>
         </nav>
+        <Outlet />
         
         
           <div class="photo">
@@ -52,6 +53,10 @@ class Home extends React.Component {
         different resons</p>
 
         </div>
+        <footer class="footer">
+      <p class='data'>Francis Habash</p>
+      <p class='data'><a href="https://github.com/francishabash/CS260-creative3">Github</a></p>
+    </footer>
             </div>
         );
     }

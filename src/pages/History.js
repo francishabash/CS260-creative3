@@ -1,11 +1,12 @@
 import React from 'react';
-
+import { Outlet, Link } from "react-router-dom";
 
 class History extends React.Component {
     render (){
         return (
         <div>
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          
           <img class="navbar-brand" src="images/Palestine.png" width="50" height="50" />
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,23 +14,24 @@ class History extends React.Component {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Palestine<span class="sr-only">(current)</span></a>
+                <Link class="nav-link" to="/home">home</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="images.html">Images</a>
+                <Link class="nav-link" to="/images">Images</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="history.html">History</a>
+                <Link class="nav-link" to="/history">History</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <Link class="nav-link" to="/about">About</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="people.html">People</a>
+                <Link class="nav-link" to="/people">People</Link>
               </li>
             </ul>
           </div>
         </nav>
+        <Outlet />
         
         <h1 class="header">History</h1>
         
@@ -54,6 +56,11 @@ class History extends React.Component {
         <p class="review">Palestinians are still fighting for an official state that’s formally recognized by all countries.</p>
         <p class="review">Although Palestinians occupy key areas of land, including the West Bank and the Gaza Strip, some Israelis, with their government's blessing, continue to settle in areas that are generally agreed to be under Palestinian control. Many international rights groups consider such settlements illegal, the borders aren’t clearly defined, and persistent conflict continues to be the norm. A substantial proportion of Israelis also oppose the settlements and would prefer to find peaceful ways to resolve their land disputes with the Palestinians.</p>
         </div>
+        
+        <footer class="footer">
+      <p class='data'>Francis Habash</p>
+      <p class='data'><a href="https://github.com/francishabash/CS260-creative3">Github</a></p>
+    </footer>
         </div>
         );
     }

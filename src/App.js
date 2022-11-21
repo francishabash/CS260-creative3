@@ -8,15 +8,15 @@ import People from "./pages/People"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/creative3/build">
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
-          <Route path="index.html" element={<Home />} />
-          <Route path="about.html" element={<About />} />
-          <Route path="history.html" element={<History />} />
-          <Route path="images.html" element={<Images />} />
-          <Route path="people.html" element={<People />} />
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="history" element={<History />} />
+          <Route path="images" element={<Images />} />
+          <Route path="people" element={<People />} />
         </Route>
       </Routes>
     </BrowserRouter>
