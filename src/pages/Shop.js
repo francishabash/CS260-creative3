@@ -93,7 +93,7 @@ function Shop() {
       {error}
       <h1>Palestinian goods handmade by locals in bethlehem</h1>
       <h3>All profits will be donated to Palestinian refugee camps</h3>
-      
+      <div class="body_div">
       <div class="pageContainer">
       
       <div class="productscont">
@@ -122,6 +122,11 @@ function Shop() {
       <Cart items={cart} errors={setError} updatecart={updateCart}/>
       </div>
       </div>
+      </div>
+      <footer class="footer">
+      <p class='data'>Francis Habash</p>
+      <p class='data'><a href="https://github.com/francishabash/CS260-creative3">Github</a></p>
+    </footer>
     </div>
   );
 }
