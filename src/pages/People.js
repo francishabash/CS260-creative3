@@ -51,33 +51,7 @@ class People extends React.Component {
     } else {
       return (
         <div class="body_div">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          
-          <img class="navbar-brand" src="images/Palestine.png" width="50" height="50" />
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <Link class="nav-link" to="/home">home</Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/images">Images</Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/history">History</Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/about">About</Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/people">People</Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <Outlet />
+        
         
         <h1 class="mine">Famous people in Palestine</h1>
         <h3 class="mine">I am getting these names from an api call to an online list</h3>

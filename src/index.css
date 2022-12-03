@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.item, .productscont,.cart{
+    width: 50%;
+    float: left;
+    padding: 20px;
+} 
+.productImage, .productText {
+  float: left;
+    padding: 20px;
+}
+
+p, h1, h3{
+  color: white;
+}
+.productName {
+  font-weight: bold;
+}
+
+/*.cartItemz {*/
+/*  width: 100%;*/
+/*  margin: auto;*/
+/*}*/
+/*.buttons, .textItem {*/
+  /*float:left;*/
+  /*width: 50%;*/
+/*}*/
